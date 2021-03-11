@@ -3,7 +3,7 @@
 cd /v2ray
 
 CONFIG_TLS=${DOMAIN:+,\"security\":\"tls\",\"tlsSettings\":{\"serverName\":\"${DOMAIN}\",\"certificates\":[{\"certificateFile\":\"cert.pem\",\"keyFile\":\"key.pem\"\}]\}}
-CONFIG_JSON1={\"log\":{\"access\":\"\",\"error\":\"\",\"loglevel\":\"warning\"},\"inbounds\":[{\"protocol\":\"vless\",\"port\":
+CONFIG_JSON1={\"log\":{\"access\":\"\",\"error\":\"\",\"loglevel\":\"none\"},\"inbounds\":[{\"protocol\":\"vless\",\"port\":
 CONFIG_JSON2=,\"settings\":{\"clients\":[{\"id\":\"
 [ ${CONFIG_TLS} ] && [ ! -e cert.pem -o ! -e key.pem ] && CONFIG_TLS=
 CONFIG_JSON3=\"}],\"decryption\":\"none\"},\"streamSettings\":{\"network\":\"ws\"${CONFIG_TLS}}}],\"outbounds\":[{\"protocol\":\"freedom\",\"settings\":{}}]}
